@@ -21,10 +21,6 @@ export default function Inventario() {
                         <label className="labels" htmlFor="name-product">Nombre del producto:</label>
                         <input className="inputs" type="text" name="name-product-inventory" id="name-product-inventory" />
                     </div>
-                    <div>
-                        <label className="labels" htmlFor="name-product">Categoria:</label>
-                        <input className="inputs" type="text" name="category-product-inventory" id="category-product-inventory" />
-                    </div>
                 </div>
                 <div className="bottom-header-right">
                     <button className="button-green">Buscar</button>

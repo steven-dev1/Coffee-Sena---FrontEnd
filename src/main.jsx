@@ -7,6 +7,8 @@ import ErrorPage from "./components/ErrorPage";
 import Venta from "./routes/Venta";
 import Inventario from "./routes/Inventario";
 import Inicio from "./routes/Inicio";
+import Login from "./routes/Login";
+import Auth from "./Auth";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +18,17 @@ const router = createBrowserRouter([
     children: [
       { path: "/inicio", element: <Inicio/> },
       { path: "/venta", element: <Venta/> },
-      { path: "/inventario", element: <Inventario/> }
+      { path: "/inventario", element: <Inventario/> },
+    ]
+  },
+  {
+    path: "/",
+    element: <Auth/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      { path: "/login", element: <Login/> },
     ]
   }
- 
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(

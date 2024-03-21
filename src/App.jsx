@@ -7,9 +7,7 @@ function App() {
   return (
       <body> 
         <Aside />
-        <main>
-          <Outlet/>
-        </main>
+        <Outlet/>
       </body>
   );
 }
