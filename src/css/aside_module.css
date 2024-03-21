@@ -1,0 +1,340 @@
+
+/* aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 1em;
+    max-width: 70px;
+    min-width: 70px;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+aside.open{
+    padding: 2em;
+    max-width: 250px;
+    min-width: 250px;
+    transition: .3s ease-in-out;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+    width: 100%;
+    height: 2em;
+    cursor: pointer;
+}
+
+.menu .barra{
+    background: #000;
+    width: 20px;
+    height: 2px;
+    transition: .3s ease-out;
+    margin: 0 auto;
+}
+
+.open .barra:nth-child(2){
+    display: none;
+    transition: .3s ease-out;
+}                                     
+
+.open .barra:nth-child(1){
+    transform: translateY(1px) rotate(45deg);
+    transition: .3s ease-out;
+}
+
+.open .barra:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+    transition:.3s ease-out;
+}
+
+.title-aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.title-aside h1{
+   display: none;
+}
+
+.title-aside i{
+    font-size: 50px;
+}
+
+.container-aside-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.ul-aside {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1em;
+}
+
+.li-nav-aside {
+    border-radius: 10px;
+    padding: .5em;
+    transition: all .1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.li-nav-aside:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.links-nav-aside {
+    color: black;
+    text-decoration: none;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+
+.li-nav-aside .links-icon-aside i {
+    color: #000;
+    font-size: 1.5em;
+}
+
+.container-img-aside {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 50%;
+}
+
+.container-buttom-leave {
+    padding: 0.8em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .1s;
+    margin-left: 5px;
+}
+
+.container-buttom-leave:hover {
+    background-color: rgb(255, 93, 93);
+    color: #fff;
+    padding: 0.8em;
+}
+
+.container-aside-img-rol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+aside.open .title-aside h1{
+    display: block;
+}
+
+aside.open .title-aside i{
+    display: none;
+}
+
+aside.open .li-nav-aside{
+    justify-content: start;
+}
+
+aside.open a{
+    display: block;
+}
+
+aside.open .title-aside{
+    display: block;
+    padding: 1em;
+} */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 2em;
+    max-width: 250px;
+    min-width: 250px;
+    transition: all .2s ease-in-out;
+
+}
+
+aside.close {
+    min-width: 110px;
+    max-width: 110px;
+    padding: 2em 0.5em;
+}
+
+aside.close .span-links{
+    display: none;
+}
+
+.title-aside img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.span-links {
+    font-weight: 600;
+}
+
+.title-aside {
+    width: 100%;
+    padding: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.title-aside h1 {
+    text-overflow: ellipsis;
+}
+
+aside.close .title-aside {
+    width: 50px;
+    padding: 0;
+}
+
+.container-aside-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.container-aside-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.organize {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.ul-aside {
+    list-style: none;
+}
+
+.li-nav-aside {
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.li-nav-aside:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.li-nav-aside .links-nav-aside.active {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.links-nav-aside {
+    display: flex;
+    gap: 1em;
+    color: black;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.links-nav-aside.active {
+    background-color: rgb(233, 233, 233);
+}
+
+.links-nav-aside svg {
+    color: #00BF9C;
+}
+
+.container-img-aside {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-img-aside img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-buttom-leave {
+    padding: 0.8em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .1s;
+    margin-left: 5px;
+    text-align: center;
+    background-color: rgb(255, 93, 93);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logout-span {
+    text-overflow: ellipsis;
+}
+
+.container-buttom-leave:hover {
+    background-color: rgb(255, 45, 45);
+}
+
+.container-aside-img-rol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu {
+    width: auto;
+    display: inline;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.nav-aside.false {
+    display: none;
+}
+
+aside.close .nav-aside.false {
+    opacity: 0;
+}
+
+aside.close .nav-aside {
+    opacity: 10;
+}
+
+aside.close .logout-span {
+    display: none;
+}
+

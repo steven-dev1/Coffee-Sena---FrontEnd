@@ -1,0 +1,38 @@
+.top-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-header-top-right {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header-top-left{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-inventory {
+    padding: 0.8em;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.date-inventory span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-weight: 500;
+    color: rgb(32, 32, 32);
+}
+.date-inventory input {
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
