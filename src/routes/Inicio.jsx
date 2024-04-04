@@ -1,16 +1,26 @@
 import Header from "../components/Header";
-import '../css/inicio_module.css'
+import '../css/inicio_module.css';
+import Pies from "./PiesChart";
+import { useEffect, useState } from "react";
 
 function Inicio() {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/v1/products')
+      .then((response) => response.json())
+      .then((data) => setProducts(data.data));
+
+  }, []);
   return (
     <>
+      <main>
       <Header title={"Inicio"} fecha={"29 Feb"} />
-      <section className="con-sect">
         <div className="containIni">
           <div className="informe">
             <div className="tituInfo">Ordenes Recientes</div>
-            <table>
-              <thead>
+            <table className="table-inicio">
+              <thead className="thead-table-inicio">
                 <tr>
                   <th>ID</th>
                   <th>Producto</th>
@@ -19,16 +29,18 @@ function Inicio() {
                   <th>Total</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>#876364</td>
-                  <td>Combo: Pastelito-gaseosa </td>
-                  <td>3.500</td>
-                  <td>
-                    <div className="total">10</div>
-                  </td>
-                  <td>35.000</td>
-                </tr>
+              <tbody className="tbody-table-inicio">
+                {products.map((p) => {
+                  return (
+                    <tr key={p.PROD_ID}>
+                      <td>{p.PROD_ID}</td>
+                      <td>{p.PROD_NOM}</td>
+                      <td>{p.PROD_PREC}</td>
+                      <td>{p.PROD_COD}</td>
+                      <td>{p.PROD_COD}</td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>
@@ -36,7 +48,9 @@ function Inicio() {
           <div className="estadis">
             <div className="datos">
               <div className="tituInfo">Datos</div>
-              <canvas id="myChart" width="300" height="300"></canvas>
+              <Pies
+              />
+            
             </div>
 
             <div className="popular">
@@ -44,7 +58,7 @@ function Inicio() {
               <div className="contePopu">
                 <div className="imgPopu">
                   <img
-                    src="../assets/img/comida.png"
+                    src="src/assets/img/comia.png"
                     alt="Producto"
                     width="87px"
                     height="77px"
@@ -74,7 +88,7 @@ function Inicio() {
               <div className="contePopu">
                 <div className="imgPopu">
                   <img
-                    src="../assets/img/enpanada.png"
+                    src="src/assets/img/enpana.png"
                     alt="Producto"
                     width="87px"
                     height="77px"
@@ -106,7 +120,10 @@ function Inicio() {
 
         </div>
 
-      </section>
+      </main>
+
+
+     
     </>
   );
 }

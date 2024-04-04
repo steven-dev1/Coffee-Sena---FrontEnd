@@ -12,9 +12,6 @@ main {
 header {
     width: 75%;
 }
-section {
-    width: 75%;
-}
 
 .top-header {
     display: flex;

@@ -1,0 +1,173 @@
+
+
+
+/* --------------------------MAIN------------------------- */
+
+main{
+    width: 100%;
+    background: #F1F4FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-main-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+}
+
+.main-filters{
+    width: 90%;
+    background: #fff;
+    display: flex;
+    border-radius: 1em;
+    align-items: center;
+    gap: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.container-main-inputs{
+    width: 100%; 
+    position: relative;
+    align-content: center;
+}
+
+.container-main-inputs input{
+    width: 70%;
+    padding: .5em;
+    padding-right: 1em;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+    outline: none;
+}
+
+.main-select{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* TABLE */
+
+.main-container{
+    width:90%;
+    padding: 1em;
+    background-color: #fff;
+    margin-top: 2em;
+    border-radius: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    
+}
+
+  th, td {
+    padding: 2em;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  thead tr {
+    background-color: #F7F6F9;
+    border-radius: 10px 10px 0 0;
+  }
+
+  td img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  td span {
+    vertical-align: middle;
+  }
+
+  td button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  td button:hover {
+    background-color: #45a049;
+  }
+
+  tbody{
+    background: #fff;
+
+  }
+  .button-green {
+    padding: 0.8em;
+    border-radius: 12px;
+    background-color: #00BF9C;
+    border: none;
+    color: #F1F4FA;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all .1s;
+    cursor: pointer;
+}
+.button-red {
+    padding: 0.8em;
+    border-radius: 12px;
+    background-color: #ff4747;
+    border: none;
+    color: #F1F4FA;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all .1s;
+    cursor: pointer;
+}
+.button-black {
+    padding: 0.8em;
+    border-radius: 12px;
+    background-color: #090909;
+    border: none;
+    color: #F1F4FA;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all .1s;
+    cursor: pointer;
+}
+
+.button-green:hover {
+    background-color: #00ad8e;
+}
+
+
+.button-red:hover {
+    background-color: #ff0000;
+}
+.button-black:hover {
+    background-color: #393939;
+}
+
+.main-container {
+  overflow-x: auto;
+}
+
+.cont-table {
+  min-width: 1366px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-venta {
+  width: 100%;
+  overflow-x: auto;
+}

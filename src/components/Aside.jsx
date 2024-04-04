@@ -27,9 +27,10 @@ function Aside() {
           {menu ?  <HiOutlineX /> : <HiMenu />}
         </div>
         <div className="title-aside">
-          {menu ? <h1>Coffee Sena</h1> : <img src="../../public/logo-coffeesena.png" alt="Logo coffee sena" />}
+          <h1 className="h1-aside">Coffee Sena</h1> 
+          <img className="img-aside" src="../../public/logo-coffeesena.png" alt="Logo coffee sena" />
         </div>
-        <nav className="nav-aside">
+        <nav className={"nav-aside"}>
           <ul className="ul-aside">
             <li className="li-nav-aside">
               <Link className={`links-nav-aside ${pathname == '/inicio' ? 'active' : ''}`} to={"/inicio"}><HiOutlineHome /> <span className="span-links">Inicio</span></Link>
@@ -39,6 +40,9 @@ function Aside() {
             </li>
             <li className="li-nav-aside">
               <Link className={`links-nav-aside ${pathname == '/venta' ? 'active' : ''}`} to={"/venta"}><HiOutlineCurrencyDollar /> <span className="span-links">Venta</span></Link>
+            </li>
+            <li className="li-nav-aside">
+              <Link className={`links-nav-aside ${pathname == '/Historial' ? 'active' : ''}`} to={"/Historial"}><HiOutlineCurrencyDollar /> <span className="span-links">Historial</span></Link>
             </li>
           </ul>
         </nav>
@@ -52,6 +56,9 @@ function Aside() {
             </li>
             <li className="li-nav-aside">
               <Link className={`links-nav-aside ${pathname == '/venta' ? 'active' : ''}`} to={"/venta"}><HiOutlineCurrencyDollar /></Link>
+            </li>
+            <li className="li-nav-aside">
+              <Link className={`links-nav-aside ${pathname == '/Historial' ? 'active' : ''}`} to={"/Historial"}><HiOutlineCurrencyDollar /></Link>
             </li>
           </ul>
         </nav>

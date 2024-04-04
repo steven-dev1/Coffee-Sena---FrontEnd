@@ -1,89 +1,55 @@
-import { Form } from "react-router-dom";
-
-export default function venta() {
-  const contact = {
-    first: "Your",
-    last: "Name",
-    avatar: "https://placekitten.com/g/200/200",
-    twitter: "your_handle",
-    notes: "Some notes",
-    favorite: true,
-  };
-
+import '../css/venta_module.css'
+export default function Venta() {
   return (
-    <div id="contact">
-      <div>
-        <img
-          key={contact.avatar}
-          src={contact.avatar || null}
-        />
+    <main>
+    <section className="container-main-top">
+      <h1 className="main-title">Venta</h1>
+      <select className="main-select">
+        <option value="">May 2024</option>
+        <option value="">Feb 2024</option>
+        <option value="">Ene 2024</option>
+      </select>
+    </section>
+
+    <section className="main-filters">
+      <div className="container-main-inputs">
+        <label>No. de Orden</label>
+        <input type="text" />
+        <i className="fa-solid fa-magnifying-glass"></i>
       </div>
+      </section>
+    <section className="main-container">
+      <section className="con-table">
+        <table className="table-venta">
+          <thead>
+            <tr>
+              <th>Imagen y Nombre del Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Opciones</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="imagen_producto1.jpg" />
+                <span>Nombre del Producto 1</span>
+              </td>
+              <td>$100.00</td>
+              <td>10</td>
+              <td>
+                <button className="button-green">Editar</button>
+                <button className="button-red">Eliminar</button>
+                <button className="button-black">Pagar</button>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+      </section>
 
-      <div>
-        <h1>
-          {contact.first || contact.last ? (
-            <>
-              {contact.first} {contact.last}
-            </>
-          ) : (
-            <i>No Name</i>
-          )}{" "}
-          <Favorite contact={contact} />
-        </h1>
+    </section>
+  </main>
+  )
 
-        {contact.twitter && (
-          <p>
-            <a
-              target="_blank"
-              href={`https://twitter.com/${contact.twitter}`}
-            >
-              {contact.twitter}
-            </a>
-          </p>
-        )}
-
-        {contact.notes && <p>{contact.notes}</p>}
-
-        <div>
-          <Form action="edit">
-            <button type="submit">Edit</button>
-          </Form>
-          <Form
-            method="post"
-            action="destroy"
-            onSubmit={(event) => {
-              if (
-                !confirm(
-                  "Please confirm you want to delete this record."
-                )
-              ) {
-                event.preventDefault();
-              }
-            }}
-          >
-            <button type="submit">Delete</button>
-          </Form>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Favorite({ contact }) {
-  let favorite = contact.favorite;
-  return (
-    <Form method="post">
-      <button
-        name="favorite"
-        value={favorite ? "false" : "true"}
-        aria-label={
-          favorite
-            ? "Remove from favorites"
-            : "Add to favorites"
-        }
-      >
-        {favorite ? "★" : "☆"}
-      </button>
-    </Form>
-  );
 }
